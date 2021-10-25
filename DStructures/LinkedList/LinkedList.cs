@@ -39,9 +39,6 @@ namespace DStructures.LinkedList
         /// <param name="item">is one element of the list.</param>
         public void Add(ILinkedListItem item)
         {
-            // Adding one to the size of the LinkedList
-            Count++;
-
             /*
              * If no items exist in the LinkedList set the First and Last Variables to the new item.
              * Otherwise set the Last variable to the item to append it.
@@ -61,26 +58,97 @@ namespace DStructures.LinkedList
                 // Set the reference for the last item.
                 i.Next = Last;
             }
+            
+            // Adding one to the size of the LinkedList
+            Count++;
         }
 
+        /// <summary>
+        /// Remove the item at the index i.
+        /// </summary>
+        /// <param name="i">is the index of the item.</param>
         public void RemoveAt(int i)
         {
-            throw new NotImplementedException();
+            if (i == 0)
+            {
+                First = First.Next;
+                return;
+            }
+            
+            // Find Item at index i
+            ILinkedListItem current = First;
+            if (current == null) return;
+            
+            for (int j = 0; j < i - 1; j++)
+            {
+                current = current.Next;
+                
+                if (current == null) return;
+            }
+            
+            // Cut Item out of the chain
+            current.Next = current.Next.Next;
+            Count--;
         }
 
+        /// <summary>
+        /// Remove the Last Element on the List.
+        /// </summary>
         public void RemoveLast()
         {
+            if (Count == 1)
+            {
+                First = null;
+                Last = null;
+                Count--;
+                return;
+            }
             
+            // Find the second to the last item
+            ILinkedListItem current = First;
+            if (current == null) return;
+            
+            for (int j = 0; j < Count - 1; j++)
+            {
+                current = current.Next;
+                
+                if (current == null) return;
+            }
+
+            // Replace last item.
+            current.Next = null;
+            Last = current;
+            Count--;
         }
 
+        /// <summary>
+        /// Return the element at index i.
+        /// </summary>
+        /// <param name="i">is the element id.</param>
+        /// <returns></returns>
         public ILinkedListItem GetAt(int i)
         {
-            throw new NotImplementedException();
+            // Find Element at index i
+            ILinkedListItem result = First;
+            
+            for (int y = 0; y < i; y++)
+            {
+                result = result.Next;
+                
+                if (result == null) return null;
+            }
+
+            return result;
         }
 
+        /// <summary>
+        /// Return the Last Element of the List.
+        /// </summary>
+        /// <returns>The last Element.</returns>
         public ILinkedListItem GetLast()
         {
-            throw new NotImplementedException();
+            return Last;
         }
+        
     }
 }
