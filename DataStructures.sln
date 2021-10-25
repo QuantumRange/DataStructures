@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DStructures", "DStructures\DStructures.csproj", "{88488B74-ED63-47F1-A0A0-13E6313772E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DStructuresUI", "DStructuresUI\DStructuresUI.csproj", "{042A4776-CADE-4937-A73B-E1C593978752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88488B74-ED63-47F1-A0A0-13E6313772E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88488B74-ED63-47F1-A0A0-13E6313772E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88488B74-ED63-47F1-A0A0-13E6313772E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88488B74-ED63-47F1-A0A0-13E6313772E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042A4776-CADE-4937-A73B-E1C593978752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042A4776-CADE-4937-A73B-E1C593978752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042A4776-CADE-4937-A73B-E1C593978752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042A4776-CADE-4937-A73B-E1C593978752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E87A142-C551-4CC9-887D-39B619D89E19}
+	EndGlobalSection
+EndGlobal

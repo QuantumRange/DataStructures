@@ -1,0 +1,47 @@
+﻿<Window x:Class="DStructuresUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DStructuresUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <Canvas Grid.Row="0" x:Name="CContent" />
+        </ScrollViewer>
+        <TabControl Grid.Row="1">
+            <TabItem Name="Test" Header="LinkedList" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Content="Add Item" />
+                    <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbAddValue" />
+                    <Button Grid.Column="2" Grid.Row="0" Content="Add" Click="BtnAdd_Click" />
+                    <Label Grid.Column="0" Grid.Row="1" Content="Delete last Item" />
+                    <Button Grid.Column="2" Grid.Row="1" Content="Delete" Click="btnDeleteLast_Click" />
+                    <Label Grid.Column="0" Grid.Row="2" Content="Add amount of random Items" />
+                    <TextBox Grid.Column="1" Grid.Row="2" x:Name="tbAddRand"/>
+                    <Button Grid.Column="2" Grid.Row="2" Content="Add n random Items" Click="btnAddRandomItems_Click" />
+                    <Label Grid.Column="0" Grid.Row="3" Content="Item count"/>
+                    <Label Grid.Column="1" Grid.Row="3" x:Name="LbItemCount"/>
+                </Grid>
+                
+            </TabItem>
+            <TabItem Header=" ... " />
+        </TabControl>
+    </Grid>
+</Window>
